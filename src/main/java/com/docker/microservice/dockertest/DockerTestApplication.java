@@ -15,7 +15,7 @@ public class DockerTestApplication {
 	
 	@GetMapping(value = "getData")
 	public String getData() {
-		return "Docker updated endpoint called....";
+		return "Docker updated endpoint built from jenkins called....";
 	}
 
 }
