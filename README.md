@@ -1,10 +1,9 @@
 # microservice-docker-test
 
 Docker commands added for deployment of docker image.
+docker build -t <docker-project-test> . :-- Build a docker image project according to docker file provided in project,<docker-project-test> is the name with which docker local image will created
 
-docker build -t docker-project-test . :-- Build a docker image project according to docker file provided in project
-
-docker run -p 9090:8080 docker-project-test :-- Run docker application in local docker image present <8080:project-port <--> 9090:docker-exposed-port>
+docker run --name=test-container -p 9090:8080 docker-project-test :-- Run docker application in local docker image present <8080:project-port <--> 9090:docker-exposed-port>
 
 docker tag docker-project-test uditsethi2408/microservice-test-repo :-- Tag the local docker projevt ro remote repository present <'uditsethi2408':dockerhubid >
 
